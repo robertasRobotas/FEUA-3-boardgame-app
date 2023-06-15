@@ -21,11 +21,14 @@ const MainPage = () => {
     <div>
       <div className={styles.cardsWrapper}>
         {boardgames.map((boardgame) => (
-          <EventCard
-            id={boardgame._id}
-            title={boardgame.title}
-            imageUrl={boardgame.boardgameImage}
-          />
+          <div key={boardgame._id}>
+            <EventCard
+              id={boardgame._id}
+              title={boardgame.title}
+              imageUrl={boardgame.boardgameImage}
+              date={boardgame.date}
+            />
+          </div>
         ))}
       </div>
     </div>
