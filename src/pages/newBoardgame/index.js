@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "./styles.module.css";
 import axios from "axios";
 import { useRouter } from "next/router";
+import Navbar from "@/components/navbar/Navbar";
 
 const NewBoardgamePage = () => {
   const router = useRouter();
@@ -33,6 +34,7 @@ const NewBoardgamePage = () => {
 
   return (
     <div>
+      <Navbar />
       <div className={styles.boardgameForm}>
         <input
           value={boardgameName}

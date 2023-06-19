@@ -1,0 +1,27 @@
+.navbar{
+    height: 80px;
+    width: 100%;
+    background-color: rgb(121, 33, 33);
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-sizing: border-box;
+}
+
+.navbar ul{
+    display: flex;
+    list-style-type: none;
+    gap:20px
+}
+
+.navbar ul li a{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.logo{
+    height: 60px;
+}
