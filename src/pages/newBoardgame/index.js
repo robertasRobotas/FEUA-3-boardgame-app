@@ -17,16 +17,19 @@ const NewBoardgamePage = () => {
   const [author, setAuthor] = useState("");
 
   const addNewBoardgame = async () => {
-    const response = await axios.post("http://localhost:8080/event", {
-      boardgameName: boardgameName,
-      title: title,
-      address: address,
-      date: date,
-      time: time,
-      boardgameImage: imageURL,
-      author: author,
-      requiredPlayers: requiredPlayers,
-    });
+    const response = await axios.post(
+      "https://boardgame-app.onrender.com/event",
+      {
+        boardgameName: boardgameName,
+        title: title,
+        address: address,
+        date: date,
+        time: time,
+        boardgameImage: imageURL,
+        author: author,
+        requiredPlayers: requiredPlayers,
+      }
+    );
 
     console.log("response", response);
     router.push("/");

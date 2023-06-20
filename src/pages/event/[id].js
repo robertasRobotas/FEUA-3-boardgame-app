@@ -9,7 +9,7 @@ const Event = () => {
   const router = useRouter();
   const fetchEvent = async () => {
     const response = await axios.post(
-      `http://localhost:8080/event/${router.query.id}`,
+      `https://boardgame-app.onrender.com/event/${router.query.id}`,
       { userId: "1234567" }
     );
 

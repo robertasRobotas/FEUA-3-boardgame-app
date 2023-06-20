@@ -3,7 +3,7 @@ import axios from "axios";
 import EventCard from "../components/eventCard/EventCard";
 import styles from "./styles.module.css";
 import Navbar from "../components/navbar/Navbar";
-import Spinner from "../components/spinner/Spinner";
+// import Spinner from "../components/spinner/Spinner";
 
 const MainPage = ({ events }) => {
   const [boardgames, setBoardgames] = useState(events);
@@ -23,7 +23,7 @@ const MainPage = ({ events }) => {
           </div>
         ))}
 
-        {!boardgames.length && <Spinner />}
+        {/* {!boardgames.length && <Spinner />} */}
       </div>
     </div>
   );
@@ -34,7 +34,9 @@ export default MainPage;
 export async function getServerSideProps(ctx) {
   console.log(ctx.query.id);
   try {
-    const response = await axios.get("http://localhost:8080/events");
+    const response = await axios.get(
+      "https://boardgame-app.onrender.com/events"
+    );
     const { data } = response;
 
     return { props: { events: data.event } };
